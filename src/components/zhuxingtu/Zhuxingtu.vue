@@ -1,7 +1,6 @@
 
 <template>
   <div class='zhuxingtu'>
-    柱型图画出之后展示
   </div>
 </template>
 <script type='text/ecmascript-6'>
@@ -23,7 +22,7 @@
             textStyle: {
               color: '#d7d7d7'
             },
-            data: ['预期人数', '实到人数']
+            data: ['血糖', '血脂']
           },
           xAxis: [{
             type: 'category',

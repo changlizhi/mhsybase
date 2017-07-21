@@ -11,7 +11,7 @@
         this.charts.setOption({
           backgroundColor: '#394056',
           title: {
-            text: 'xx客户xx日血糖-血压-血脂曲线图',
+            text: 'xx客户xx日胰岛素-c肽-血糖曲线面积图',
             textStyle: {
               fontWeight: 'normal',
               fontSize: 16,
@@ -32,7 +32,7 @@
             itemWidth: 14,
             itemHeight: 5,
             itemGap: 13,
-            data: ['血脂', '血压', '血糖'],
+            data: ['胰岛素', 'c肽', '血糖'],
             right: '4%',
             textStyle: {
               fontSize: 12,
@@ -78,7 +78,7 @@
             }
           }],
           series: [{
-            name: '血脂',
+            name: '胰岛素',
             type: 'line',
             smooth: true,
             lineStyle: {
@@ -106,7 +106,7 @@
             },
             data: [112, 129, 104, 123]
           }, {
-            name: '血压',
+            name: 'c肽',
             type: 'line',
             smooth: true,
             lineStyle: {

@@ -1,5 +1,5 @@
 <template>
-  <div class='quxianmianji'>
+  <div class='canhouzao'>
   </div>
 </template>
 <script type='text/ecmascript-6'>
@@ -11,7 +11,7 @@
         this.charts.setOption({
           backgroundColor: '#394056',
           title: {
-            text: 'xx客户xx日血糖-血压-血脂曲线图',
+            text: 'xx用户使用迪恩摩因干预后餐后两小时（晚）血糖曲线图',
             textStyle: {
               fontWeight: 'normal',
               fontSize: 16,
@@ -32,7 +32,7 @@
             itemWidth: 14,
             itemHeight: 5,
             itemGap: 13,
-            data: ['血脂', '血压', '血糖'],
+            data: ['血糖'],
             right: '4%',
             textStyle: {
               fontSize: 12,
@@ -53,7 +53,7 @@
                 color: '#57617B'
               }
             },
-            data: ['空腹', '餐后半小时', '餐后一小时', '餐后两小时']
+            data: ['1', '4', '7', '10', '13', '16', '19', '22', '25', '28', '31', '34', '37', '40', '43', '46', '49', '52', '55', '58', '61', '64', '67', '70', '73', '76', '79', '82', '85', '88', '91', '94', '97', '100', '103', '106', '109', '112', '115', '118', '121', '124', '127', '130', '133', '136', '139', '142', '145', '148', '151', '154', '157', '160', '163', '166', '169', '172', '175', '178']
           }],
           yAxis: [{
             type: 'value',
@@ -78,36 +78,6 @@
             }
           }],
           series: [{
-            name: '血脂',
-            type: 'line',
-            smooth: true,
-            lineStyle: {
-              normal: {
-                width: 1
-              }
-            },
-            itemStyle: {
-              normal: {
-                color: 'rgb(137,189,27)'
-              }
-            },
-            data: [112, 129, 104, 123]
-          }, {
-            name: '血压',
-            type: 'line',
-            smooth: true,
-            lineStyle: {
-              normal: {
-                width: 1
-              }
-            },
-            itemStyle: {
-              normal: {
-                color: 'rgb(0,136,212)'
-              }
-            },
-            data: [89, 91, 94, 87]
-          }, {
             name: '血糖',
             type: 'line',
             smooth: true,
@@ -121,7 +91,7 @@
                 color: 'rgb(219,50,51)'
               }
             },
-            data: [79, 84, 93, 89]
+            data: [124, 133, 134, 137, 140, 123, 122, 124, 133, 134, 137, 140, 123, 122, 124, 133, 134, 137, 123, 122, 124, 133, 134, 137, 140, 123, 122, 124, 133, 134, 137, 140, 123, 122, 124, 133, 134, 137, 140, 123, 122, 124, 133, 134, 137, 123, 122, 124, 133, 134, 137, 123, 122, 124, 133, 123, 122, 124, 133, 122]
           }]
         })
       }
@@ -129,14 +99,14 @@
       // 调用
     mounted () {
       this.$nextTick(function () {
-        this.drawPie('quxianmianji')
+        this.drawPie('canhouzao')
       })
     }
   }
 
 </script>
 <style lang='stylus' rel='stylesheet/stylus'>
-  .quxianmianji
+  .canhouzao
     background: #eeccff
     width: 800px
     height: 400px
