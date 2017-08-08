@@ -10,13 +10,11 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang='sass'>
+@import "node_modules/bulma/sass/utilities/_all"
+@import "node_modules/bulma/sass/base/_all"
+@import "node_modules/bulma/sass/elements/_all"
+@import "node_modules/bulma/sass/components/_all"
+@import "node_modules/bulma/sass/grid/_all"
+@import "node_modules/bulma/sass/layout/_all"
 </style>

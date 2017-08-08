@@ -1,16 +1,6 @@
 <template>
   <div class='header'>
     <div class='header-nav'>
-      <router-link to='/indexh/zhuxingtu'>
-        <div class='nav-zhuxingtu'>
-          <span class='text'>柱型图</span>
-        </div>
-      </router-link>
-      <router-link to='/indexh/yuanquan'>
-        <div class='nav-yuanquan'>
-          <span class='text'>圆圈图</span>
-        </div>
-      </router-link>
       <router-link to='/indexh/quxianmianji'>
         <div class='nav-quxianmianji'>
           <span class='text'>血糖曲线下面积图</span>

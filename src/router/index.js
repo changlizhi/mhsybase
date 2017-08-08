@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Indexh from '@/components/index/Indexh.vue'
+import Indexnone from '@/components/index/Indexnone.vue'
 import Yuanquan from '@/components/yuanquan/Yuanquan.vue'
 import Zhuxingtu from '@/components/zhuxingtu/Zhuxingtu.vue'
 import Quxianmianji from '@/components/quxianmianji/Quxianmianji.vue'
@@ -20,7 +21,7 @@ export default new Router({
     }, {
       path: '/indexh',
       name: 'indexh',
-      redirect: '/indexh/zhuxingtu',
+      redirect: '/indexh/kongfu',
       component: Indexh,
       children: [{
         path: 'yuanquan',
@@ -44,6 +45,10 @@ export default new Router({
         path: 'canhouwan',
         component: Canhouwan
       }]
+    }, {
+      path: '/indexnone',
+      name: 'indexnone',
+      component: Indexnone
     }
   ]
 })

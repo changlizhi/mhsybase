@@ -1,16 +1,54 @@
 <template>
-  <div class='kongfu'>
+  <div class='kongfucontainer'>
+    <div class='xuliehao'>
+      <div class="select" @change='changexuliehao($event)'>
+        <select>
+          <option value=''>请选择用户设备号</option>
+          <option v-for='xlh in xuliehao' :value='xlh'>
+            {{xlh}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class='kongfu'></div>
   </div>
 </template>
 <script type='text/ecmascript-6'>
   import echarts from 'echarts'
   export default{
+    data () {
+      return {
+        xuliehao: [],
+        yonghuming: ''
+      }
+    },
+      // 调用
+    mounted () {
+      this.$http.get('http://localhost:8080/mhsy_web/admin/member/names').then(
+        response => {
+          this.xuliehao = response.data.xuliehao
+        },
+        response => {
+          this.xuliehao = undefined
+        }
+      )
+      console.log(this.$refs.xulie)
+      this.$nextTick(function () {
+        this.drawPie('kongfu', this.yonghuming)
+      })
+    },
     methods: {
-      drawPie (name) {
+      changexuliehao (event) {
+        this.$nextTick(function () {
+          this.yonghuming = event.target.value
+          this.drawPie('kongfu', this.yonghuming)
+        })
+      },
+      drawPie (name, yonghuming) {
         this.charts = echarts.init(document.getElementsByClassName(name)[0])
         this.charts.setOption({
           title: {
-            text: 'xx客户干预后空腹血糖走势图',
+            text: yonghuming + '客户干预后空腹血糖走势图',
             x: 'middle'
           },
           tooltip: {
@@ -227,12 +265,6 @@
           }]
         })
       }
-    },
-      // 调用
-    mounted () {
-      this.$nextTick(function () {
-        this.drawPie('kongfu')
-      })
     }
   }
 
